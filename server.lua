@@ -3,7 +3,7 @@ ESX = exports['es_extended']:getSharedObject()
 RegisterServerEvent("mm-lombard:sprzedajitem")
 AddEventHandler("mm-lombard:sprzedajitem", function(itemName, amount)
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local price = Config.PawnshopItems[itemName]
+	local price = Config.LombardItems[itemName]
 	local xItem = xPlayer.getInventoryItem(itemName)
 
 	if not price then
