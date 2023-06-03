@@ -51,7 +51,7 @@ function OtworzLombard()
 				name = v.name,
 				price = price,
 
-				-- menu properties
+				-- lepiej zostawić
 				type = 'slider',
 				value = 1,
 				min = 1,
