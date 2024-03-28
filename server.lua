@@ -6,10 +6,7 @@ AddEventHandler("mm-lombard:sprzedajitem", function(itemName, amount)
 	local price = Config.LombardItems[itemName]
 	local xItem = xPlayer.getInventoryItem(itemName)
 
-	if not price then
-		print(('ten item nie istnieje!'):format(xPlayer.identifier))
-		return
-	end
+	if not price then print(('Ten item nie istnieje!'):format(xPlayer.identifier)) return end
 
 	if xItem.count < amount then
         TriggerClientEvent('esx:showNotification', source, 'Nie masz wystarczającej ilości tego przedmiotu!')
