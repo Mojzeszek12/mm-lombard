@@ -98,6 +98,7 @@ AddEventHandler('onResourceStop', function(resource)
 	if resource == GetCurrentResourceName() then
 		if menuOpen then
 			ESX.UI.Menu.CloseAll()
+			return
 		end
 	end
 end)
