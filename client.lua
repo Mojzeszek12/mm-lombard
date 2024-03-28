@@ -6,7 +6,7 @@ ESX = exports['es_extended']:getSharedObject()
 
 
 exports.qtarget:AddBoxZone("lombard", vector3(Config.LombardLocation.x, Config.LombardLocation.y, Config.LombardLocation.z), Config.LombardLocation.bigx, Config.LombardLocation.bigy, {
-        name="lombard",
+        name="lombard_point",
         heading=Config.LombardLocation.h,
         debugPoly=false,
         minZ=Config.Config.LombardLocation.minz,
@@ -98,6 +98,7 @@ AddEventHandler('onResourceStop', function(resource)
 	if resource == GetCurrentResourceName() then
 		if menuOpen then
 			ESX.UI.Menu.CloseAll()
+			return
 		end
 	end
 end)
